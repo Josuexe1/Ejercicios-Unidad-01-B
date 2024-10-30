@@ -1,0 +1,19 @@
+Iniciar
+    Definir función calcular_raices(a, b, c)
+        discriminante = b^2 - 4*a*c
+        Si discriminante > 0 Entonces
+            x1 = (-b + sqrt(discriminante)) / (2*a)
+            x2 = (-b - sqrt(discriminante)) / (2*a)
+            Imprimir "Raíces reales diferentes: x1 = ", x1, ", x2 = ", x2
+        Sino Si discriminante = 0 Entonces
+            x1 = -b / (2*a)
+            Imprimir "Raíz real doble: x1 = x2 = ", x1
+        Sino
+            Imprimir "Raíces complejas."
+        Fin Si
+    Fin función
+
+    Definir a, b, c
+    Solicitar valores para a, b, c
+    calcular_raices(a, b, c)
+Fin

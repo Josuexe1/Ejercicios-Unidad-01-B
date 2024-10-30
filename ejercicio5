@@ -1,0 +1,14 @@
+Iniciar
+    Definir función suma_inversa(n, x[])
+        suma = 0
+        Para i desde n-1 hasta 0 Hacer
+            suma = suma + x[i]
+        Fin Para
+        Imprimir "La suma es: ", suma
+    Fin función
+
+    Definir n
+    Definir arreglo x[n]
+    Llenar x con valores
+    suma_inversa(n, x)
+Fin

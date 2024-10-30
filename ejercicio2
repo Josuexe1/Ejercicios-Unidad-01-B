@@ -1,0 +1,23 @@
+Iniciar
+    Definir función arctan_serie(x, precision)
+        n = 0
+        suma = 0
+        término = x
+        Mientras |término| > precision Hacer
+            suma = suma + término
+            n = n + 1
+            término = (-1)^n * (x^(2*n + 1)) / (2*n + 1)
+        Fin Mientras
+        Retornar n, suma
+    Fin función
+
+    Definir x = 1
+    Definir precision1 = 10^(-3)
+    Definir precision2 = 10^(-10)
+
+    n1, suma1 = arctan_serie(x, precision1)
+    n2, suma2 = arctan_serie(x, precision2)
+
+    Imprimir "Número de términos para precisión 10^-3: ", n1
+    Imprimir "Número de términos para precisión 10^-10: ", n2
+Fin

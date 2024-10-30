@@ -1,0 +1,29 @@
+Iniciar
+    Definir función calcular_pi(precision)
+        n = 0
+        suma_arctan1 = 0
+        suma_arctan2 = 0
+        término1 = 4
+        término2 = 1/239
+
+        Mientras |término1| > precision Hacer
+            suma_arctan1 = suma_arctan1 + término1
+            n = n + 1
+            término1 = (-1)^n * (1/5)^(2*n + 1) / (2*n + 1)
+        Fin Mientras
+
+        n = 0
+        Mientras |término2| > precision Hacer
+            suma_arctan2 = suma_arctan2 + término2
+            n = n + 1
+            término2 = (-1)^n * (1/239)^(2*n + 1) / (2*n + 1)
+        Fin Mientras
+
+        pi_aprox = 4 * (suma_arctan1 - suma_arctan2)
+        Retornar pi_aprox
+    Fin función
+
+    Definir precision = 10^(-3)
+    pi_aproximado = calcular_pi(precision)
+    Imprimir "Aproximación de π: ", pi_aproximado
+Fin
